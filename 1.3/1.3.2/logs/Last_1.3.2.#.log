@@ -1,0 +1,63 @@
+# IPython log file
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+a = np.random.randn(10000)
+plt.hist(a)
+#[Out]# (array([   17.,   154.,   702.,  1837.,  2859.,  2557.,  1363.,   430.,
+#[Out]#           68.,    13.]), array([-3.6194429 , -2.86965512, -2.11986733, -1.37007955, -0.62029177,
+#[Out]#         0.12949601,  0.87928379,  1.62907157,  2.37885935,  3.12864713,
+#[Out]#         3.87843491]), <a list of 10 Patch objects>)
+plt.savefig('1.3.2/Histogram)
+plt.savefig('1.3.2/Histogram')
+# Tue, 04 Dec 2018 16:51:21
+# Keenan Kalra 1.3.2 IPython log
+# Tue, 04 Dec 2018 21:26:24
+5 + 3
+#[Out]# 8
+# Tue, 04 Dec 2018 21:27:42
+8/2
+#[Out]# 4
+# Tue, 04 Dec 2018 21:27:50
+8/2.0
+#[Out]# 4.0
+# Tue, 04 Dec 2018 21:27:55
+8.0/2
+#[Out]# 4.0
+# Tue, 04 Dec 2018 21:29:52
+#8.Assignment
+# Tue, 04 Dec 2018 21:30:09
+student_age = 16
+# Tue, 04 Dec 2018 21:30:26
+a = 2
+# Tue, 04 Dec 2018 21:30:31
+a
+#[Out]# 2
+# Tue, 04 Dec 2018 21:30:47
+a * 7 #Multiplication
+#[Out]# 14
+# Tue, 04 Dec 2018 21:30:56
+3 ** a
+#[Out]# 9
+# Tue, 04 Dec 2018 21:31:19
+23 ** 43
+#[Out]# 35834136918934220777541995677272642015423987712183913488967L
+# Tue, 04 Dec 2018 21:31:40
+abs(-7)
+#[Out]# 7
+# Wed, 05 Dec 2018 17:26:21
+%run 1.3.2/Last_1.3.2.py #runs your code from the editor
+# Wed, 05 Dec 2018 17:26:29
+%run 1.3.2/Last_1.3.2.py #runs your code from the editor
+# Wed, 05 Dec 2018 17:26:53
+%run 1.3.2/Kalra_1.3.2.py
+# Wed, 05 Dec 2018 17:27:11
+%run 1.3.2/Kalra_1.3.2.py
+# Wed, 05 Dec 2018 17:27:24
+%run 1.3.2/Kalra_1.3.2.py
+# Wed, 05 Dec 2018 17:27:43
+%run 1.3.2/Kalra_1.3.2.py #runs the code from the editor
+# Wed, 05 Dec 2018 17:38:56
+%logstop

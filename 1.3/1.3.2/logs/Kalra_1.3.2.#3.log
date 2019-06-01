@@ -1,0 +1,183 @@
+# IPython log file
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+a = np.random.randn(10000)
+plt.hist(a)
+#[Out]# (array([   17.,   154.,   702.,  1837.,  2859.,  2557.,  1363.,   430.,
+#[Out]#           68.,    13.]), array([-3.6194429 , -2.86965512, -2.11986733, -1.37007955, -0.62029177,
+#[Out]#         0.12949601,  0.87928379,  1.62907157,  2.37885935,  3.12864713,
+#[Out]#         3.87843491]), <a list of 10 Patch objects>)
+plt.savefig('1.3.2/Histogram)
+plt.savefig('1.3.2/Histogram')
+%logstart -ort 1.3.2/logs/Last_1.3.2.#.log
+# Keenan Kalra 1.3.2 IPython log
+5 + 3
+#[Out]# 8
+8/2
+#[Out]# 4
+8/2.0
+#[Out]# 4.0
+8.0/2
+#[Out]# 4.0
+#8.Assignment
+student_age = 16
+a = 2
+a
+#[Out]# 2
+a * 7 #Multiplication
+#[Out]# 14
+3 ** a
+#[Out]# 9
+23 ** 43
+#[Out]# 35834136918934220777541995677272642015423987712183913488967L
+abs(-7)
+#[Out]# 7
+%run 1.3.2/Last_1.3.2.py #runs your code from the editor
+%run 1.3.2/Last_1.3.2.py #runs your code from the editor
+%run 1.3.2/Kalra_1.3.2.py
+%run 1.3.2/Kalra_1.3.2.py
+%run 1.3.2/Kalra_1.3.2.py
+%run 1.3.2/Kalra_1.3.2.py #runs the code from the editor
+%logstop
+%logstart -ort 1.3.2/logs/Last_1.3.2.1#.log
+%logstop
+%logstart -ort 1.3.2/logs/Last_1.3.2.#1.log
+%run 1.3.2/Kalra_1.3.2.py #runs the code from the editor
+ %run 1.3.2/Keenna_1.3.2.py
+%run 1.3.2/Kalra_1.3.2.py #runs the code from the editor
+a = add_tip(20,0.15)\
+a
+a = add_tip(20, 0.15)
+a
+#[Out]# 23.0
+%logstop
+%logstart -ort 1.3.2/logs/Last_1.3.2.#2.log
+#Thursday log entry in class
+#NOTE: MY PREVIOUS LOGS ARE MESSED UP
+'''When you use the python code editor, you can type in multiple lines of code without worrying whether to run it every single time. You can wait and run it at the end'''
+#[Out]# 'When you use the python code editor, you can type in multiple lines of code without worrying whether to run it every single time. You can wait and run it at the end'
+#Scratch extended the if block so it wraps around all the block inside
+'''When you define a function with def, you would use docstring to explain your work to your future self or someone else in case they forget or do not understand.'''
+#[Out]# 'When you define a function with def, you would use docstring to explain your work to your future self or someone else in case they forget or do not understand.'
+'''Some advantages of destroying local variables once the block is done excecuting are it save up space in the python memory and you won't risk the variable being confused onfused with another variable which cause your program to break.'''
+#[Out]# "Some advantages of destroying local variables once the block is done excecuting are it save up space in the python memory and you won't risk the variable being confused onfused with another variable which cause your program to break."
+'''A compiler would look like Google Translate. It gives you the translation after you type in the entire sentence/paragraph.'''
+#[Out]# 'A compiler would look like Google Translate. It gives you the translation after you type in the entire sentence/paragraph.'
+a = add_tip(20,0.15)
+a
+#[Out]# 23.0
+add_tip(30,0.15)
+#[Out]# 34.5
+#17a
+hyp(3,4)
+hyp(3,4)
+hyp(3,4)
+a = hyp(3,4)
+mean(3,4,5)
+add_tip(30, 0.1)
+#[Out]# 33.0
+hyp(3,4)
+add_tip(3,4)
+#[Out]# 15
+add_tips(3,4)
+%run 1.3.2/Kalra_1.3.2.py
+hyp(3,4)
+#[Out]# 5.0
+mean(490, 29041, 28913)
+#[Out]# 19481.333333333332
+mean(2,4,5)
+#[Out]# 3.6666666666666665
+%run 1.3.2/Kalra_1.3.2.py
+perimter(3,5)
+perimeter(3,5)
+#[Out]# 16
+#Conclusion
+'''I would like to use python to find out which nfl players are playing the best and eest and should be used in my fantasy.'''
+#[Out]# 'I would like to use python to find out which nfl players are playing the best and eest and should be used in my fantasy.'
+'''Some native types are int(integer), float(real number), boolean(True or False), and string(any character).'''
+#[Out]# 'Some native types are int(integer), float(real number), boolean(True or False), and string(any character).'
+'''Some differences between the command line of the interpretive iPython session and the ythonditohere you edit a file on
+
+
+%logstop
+
+da
+daad
+clear
+help
+def
+\ 
+fdfd
+'''
+#[Out]# 'Some differences between the command line of the interpretive iPython session and the ythonditohere you edit a file on\n\n\n%logstop\n\nda\ndaad\nclear\nhelp\ndef\n\\ \nfdfd\n'
+%logstop
+ %run 1.3.2/Keenna_1.3.2.py
+%run 1.3.2/Kalra_1.3.2.py
+quadratic_expansion(3, 2, 3, 2)
+%run 1.3.2/Kalra_1.3.2.py
+quadratic_expansion(3, 2, 3, 2)
+#[Out]# 25
+# Fri, 07 Dec 2018 16:04:10
+#Friday in class work on conclusion questions
+# Fri, 07 Dec 2018 16:04:20
+#Conclusion Questions
+# Fri, 07 Dec 2018 16:04:47
+#1
+# Fri, 07 Dec 2018 16:05:07
+'''I would like to use python to find out which nfl players are playing the best and should be used in my fantasy.'''
+#[Out]# 'I would like to use python to find out which nfl players are playing the best and should be used in my fantasy.'
+# Fri, 07 Dec 2018 16:05:09
+#2
+# Fri, 07 Dec 2018 16:05:25
+'''Some native types are int(integer), float(real number), boolean(True or False), and string(any character).'''
+#[Out]# 'Some native types are int(integer), float(real number), boolean(True or False), and string(any character).'
+# Fri, 07 Dec 2018 16:05:27
+#3
+# Fri, 07 Dec 2018 16:08:12
+rpretive iPython session and the code editor where you edit a file of code are 
+# Fri, 07 Dec 2018 16:11:10
+'''Some differences between the command line of the interpretive iPython session and the code editor where you edit a file of code are you can type in multiple lines of codeof code at once, define different functions and tweak it whenever you want, and you can see all the code without have to scroll up'''
+#[Out]# 'Some differences between the command line of the interpretive iPython session and the code editor where you edit a file of code are you can type in multiple lines of codeof code at once, define different functions and tweak it whenever you want, and you can see all the code without have to scroll up'
+# Fri, 07 Dec 2018 16:14:17
+'''Some advantages of putting code in the function defintion are you can tweak it whenever you want, k it whenever you want, call it whenever you want, and k it whenever you
+
+stop
+;
+%logstop
+"
+'''
+#[Out]# 'Some advantages of putting code in the function defintion are you can tweak it whenever you want, k it whenever you want, call it whenever you want, and k it whenever you\n\nstop\n;\n%logstop\n"\n'
+# Fri, 07 Dec 2018 16:15:47
+'''Some advantages of putting code in the function definition ar eyou can tweak it whenever you want, saved for future refrences, the code won't mess up with code outside.''tside'''
+#[Out]# "Some advantages of putting code in the function definition ar eyou can tweak it whenever you want, saved for future refrences, the code won't mess up with code outside.''tside"
+# Fri, 07 Dec 2018 16:16:51
+'''Some differences between the command line of the interpretive iPython session and the code editor where you edit a file of code are you can type in multiple lines of codeof code at once, define different functions and tweak it whenever you want, and you can see all the code without have to scroll
+
+'''
+#[Out]# 'Some differences between the command line of the interpretive iPython session and the code editor where you edit a file of code are you can type in multiple lines of codeof code at once, define different functions and tweak it whenever you want, and you can see all the code without have to scroll\n\n'
+# Fri, 07 Dec 2018 16:17:10
+%run 1.3.2/Kalra_1.3.2.p
+# Fri, 07 Dec 2018 16:17:38
+%run 1.3.2/Kalra_1.3.2.py
+# Fri, 07 Dec 2018 16:18:08
+add_tip(20, 0.15)
+#[Out]# 23.0
+# Fri, 07 Dec 2018 16:18:22
+add_tip(30, 0.15)
+#[Out]# 34.5
+# Fri, 07 Dec 2018 16:18:28
+hyp(3,4)
+#[Out]# 5.0
+# Fri, 07 Dec 2018 16:18:39
+mean(3, 4, 7)
+#[Out]# 4.666666666666667
+# Fri, 07 Dec 2018 16:18:46
+perimeter(3, 4)
+#[Out]# 14
+# Fri, 07 Dec 2018 16:23:02
+%run 1.3.2/Kalra_1.3.2.py
+# Fri, 07 Dec 2018 16:23:23
+%run 1.3.2/Kalra_1.3.2.py
