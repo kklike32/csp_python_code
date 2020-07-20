@@ -37,7 +37,7 @@ def hangman():
     print()
     print("Do you want to play single player or two player version?")
     print("Type in 'single' or 'double'.")
-    game_choice = str(raw_input(""))
+    game_choice = str(input())
 
     if game_choice == "double":
         print("Welcome, two players. Choose who is player one")
@@ -45,7 +45,7 @@ def hangman():
         print()
         print("Player number one, please type in a secret.")
         print("It has to be a single word!!!")
-        game_choice1 = str(raw_input())
+        game_choice1 = str(input())
         secret = game_choice1
         print("Okay, the secret is '", secret, "' .")
         print()
@@ -78,7 +78,7 @@ def hangman():
         print()
         print("Type in 'NFL' or 'NBA'.")
 
-        choice = str(raw_input('Type: \n')).upper()
+        choice = str(input('Type: \n')).upper()
 
         if choice == 'NBA':
             secret = random.choice(nba_teams)
@@ -142,7 +142,7 @@ def hangman():
         print("Type in 'yes' or 'no'.")
 
         # Converts all word word into lowercase to make it easier
-        ans = str(raw_input('Type: \n')).lower()
+        ans = str(input('Type: \n')).lower()
         if ans == 'yes':
             print()
             print("The secret is", secret)
@@ -177,7 +177,7 @@ def hangman():
             print (*guessed_letters, sep = ", ")
             print ()
 
-            guess = raw_input("Type a character or the entire secret: \n")
+            guess = input("Type a character or the entire secret: \n")
 
             # Adds the correctly guessed letters into the to actual word
 
@@ -297,7 +297,7 @@ def replay():
 
     print("Do you want to play this hangman game?")
     print("Type in 'yes' or 'no'.")
-    ans1 = str(raw_input('Type: \n')).lower()
+    ans1 = str(input('Type: \n')).lower()
 
 
     int1 = 1
@@ -317,7 +317,7 @@ def replay():
         hangman()
         print("Do you want to play again?")
         print("Type in 'yes' or 'no'.")
-        ans1 = str(raw_input('Type: \n')).lower()
+        ans1 = str(input('Type: \n')).lower()
 
         int1 = 1
 
