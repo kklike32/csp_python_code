@@ -1,28 +1,28 @@
 from random import randint
 
-print ""
-print ""
-print "  _  __                             _  __     _             ____   ___  _  ___"
-print " | |/ /___  ___ _ __   __ _ _ __   | |/ /__ _| |_ __ __ _  |___ \ / _ \/ |/ _ \ "
-print " | ' // _ \/ _ \ '_ \ / _` | '_ \  | ' // _` | | '__/ _` |   __) | | | | | (_) |"
-print " | . \  __/  __/ | | | (_| | | | | | . \ (_| | | | | (_| |  / __/| |_| | |\__, |"
-print " |_|\_\___|\___|_| |_|\__,_|_| |_| |_|\_\__,_|_|_|  \__,_| |_____|\___/|_|  /_/ "
-print ""
-print ""
+print ("")
+print ("")
+print ("  _  __                             _  __     _             ____   ___  _  ___")
+print (" | |/ /___  ___ _ __   __ _ _ __   | |/ /__ _| |_ __ __ _  |___ \ / _ \/ |/ _ \ ")
+print (" | ' // _ \/ _ \ '_ \ / _` | '_ \  | ' // _` | | '__/ _` |   __) | | | | | (_) |")
+print (" | . \  __/  __/ | | | (_| | | | | | . \ (_| | | | | (_| |  / __/| |_| | |\__, |")
+print (" |_|\_\___|\___|_| |_|\__,_|_| |_| |_|\_\__,_|_|_|  \__,_| |_____|\___/|_|  /_/ ")
+print ("")
+print ("")
 
 def minesweeper_game_5():
-  print "This is a one player minesweeper game."
-  print "Type in a row and column to try to find where the mine is."
-  print "You are not typing in the mine's location, instead, type in"
-  print "coordinates that you think are close to the mines."
-  print "A _ means that you haven't guessed there yet."
-  print "A 0 means that there are no mines within one unit."
-  print "A 1 means that there are one mine within one unit."
-  print "A 2 means that there are two mines within one unit."
-  print "To flag where the mine is, type in -1 for row and -1 for column."
-  print "Be sure to type in only NUMBERS from 1 through 5."
-  print "Remember, row is HORIZONTAL and column is VERTICAL."
-  print "Have Fun!!"
+  print ("This is a one player minesweeper game.")
+  print ("Type in a row and column to try to find where the mine is.")
+  print ("You are not typing in the mine's location, instead, type in")
+  print ("coordinates that you think are close to the mines.")
+  print ("A _ means that you haven't guessed there yet.")
+  print ("A 0 means that there are no mines within one unit.")
+  print ("A 1 means that there are one mine within one unit.")
+  print ("A 2 means that there are two mines within one unit.")
+  print ("To flag where the mine is, type in -1 for row and -1 for column.")
+  print ("Be sure to type in only NUMBERS from 1 through 5.")
+  print ("Remember, row is HORIZONTAL and column is VERTICAL.")
+  print ("Have Fun!!")
 
   board = []
 
@@ -34,7 +34,7 @@ def minesweeper_game_5():
 
   def print_board(board):
     for row in board:
-      print " ".join(row)
+      print (" ".join(row))
 
   print_board(board)
 
@@ -58,23 +58,23 @@ def minesweeper_game_5():
 
 
   """
-  print ""
+  print ("")
   print "MINE LOCATIONS"
   print mine_row, mine_col
   print mine_row1, mine_col1
   """
 
   for turn in range(1, 20):
-    print ""
-    print ""
-    print "Turn", turn
+    print ("")
+    print ("")
+    print ("Turn", turn)
 
-    guess_row = (int(raw_input("Guess Row: ")))
-    guess_col = (int(raw_input("Guess Column: ")))
+    guess_row = (int(input("Guess Row: ")))
+    guess_col = (int(input("Guess Column: ")))
 
     if guess_row == mine_row and guess_col == mine_col or \
     guess_row == mine_row1 and guess_col == mine_col1:
-      print "Oops, you hit a mine"
+      print ("Oops, you hit a mine")
       break
 
     else:
@@ -83,34 +83,34 @@ def minesweeper_game_5():
 
         if guess_col == -1 and guess_row == -1:
           print_board(board)
-          print ""
+          print ("")
           print("Do you know where a mine is? (yes/no)")
-          answer = str(raw_input("Type: ")).lower()
+          answer = str(input("Type: ")).lower()
           if answer == "yes":
-            answer_mine_row = (int(raw_input("Guess Row:")))
-            answer_mine_col = (int(raw_input("Guess Column:")))
+            answer_mine_row = (int(input("Guess Row:")))
+            answer_mine_col = (int(input("Guess Column:")))
 
             if answer_mine_row == mine_row and \
             answer_mine_col == mine_col or \
             answer_mine_row == mine_row1 and \
             answer_mine_col == mine_col1:
-              print "Correct Answer"
+              print ("Correct Answer")
               board[answer_mine_row][answer_mine_col] = " X "
             else:
-              print "Incorrect"
+              print ("Incorrect")
 
         elif guess_col == -2 and guess_row == -2:
-          print ""
+          print ("")
           break
 
         else:
-          print "Oops, that's not even in the ocean."
+          print ("Oops, that's not even in the ocean.")
       elif board[guess_row][guess_col] == " X ":
-        print( "You guessed that one already." )
+        print ("You guessed that one already.")
 
 
       elif guess_row == 0 or guess_col == 0:
-        print "Oops, that's not even in the ocean."
+        print ("Oops, that's not even in the ocean.")
 
       else:
 
@@ -150,32 +150,32 @@ def minesweeper_game_5():
 
       if board[mine_row][mine_col] == " X " and \
       board[mine_row1][mine_col1] == " X ":
-        print ""
-        print "Congragulations, you win in", turn, "turns."
+        print ("")
+        print ("Congratulations, you win in", turn, "turns.")
         print_board(board)
         break
 
       if (turn == 50):
-        print "Game Over"
-        print "The first mine was at", mine_row, ",", mine_col
-        print "The second mine was at", mine_row1, ",", mine_col1
+        print ("Game Over")
+        print ("The first mine was at", mine_row, ",", mine_col)
+        print ("The second mine was at", mine_row1, ",", mine_col1)
 
       print_board(board)
 
 
 def minesweeper_game_8():
-  print "This is a one player minesweeper game."
-  print "Type in a row and column to try to find where the mine is."
-  print "You are not typing in the mine's location, instead, type in"
-  print "coordinates that you think are close to the mines."
-  print "A _ means that you haven't guessed there yet."
-  print "A 0 means that there are no mines within one unit."
-  print "A 1 means that there are one mine within one unit."
-  print "A 2 means that there are two mines within one unit and so forth"
-  print "To flag where the mine is, type in -1 for row and -1 for column."
-  print "Be sure to type in only NUMBERS from 1 through 8."
-  print "Remember, row is HORIZONTAL and column is VERTICAL."
-  print "Have Fun!!"
+  print ("This is a one player minesweeper game.")
+  print ("Type in a row and column to try to find where the mine is.")
+  print ("You are not typing in the mine's location, instead, type in")
+  print ("coordinates that you think are close to the mines.")
+  print ("A _ means that you haven't guessed there yet.")
+  print ("A 0 means that there are no mines within one unit.")
+  print ("A 1 means that there are one mine within one unit.")
+  print ("A 2 means that there are two mines within one unit and so forth")
+  print ("To flag where the mine is, type in -1 for row and -1 for column.")
+  print ("Be sure to type in only NUMBERS from 1 through 8.")
+  print ("Remember, row is HORIZONTAL and column is VERTICAL.")
+  print ("Have Fun!!")
 
   board = []
 
@@ -187,7 +187,7 @@ def minesweeper_game_8():
 
   def print_board(board):
     for row in board:
-      print " ".join(row)
+      print (" ".join(row))
 
   print_board(board)
 
@@ -223,25 +223,25 @@ def minesweeper_game_8():
 
 
   """
-  print ""
-  print "MINE LOCATIONS"
-  print mine_row1, mine_col1
-  print mine_row2, mine_col2
-  print mine_row3, mine_col3
-  print mine_row4, mine_col4
-  print mine_row5, mine_col5
-  print mine_row6, mine_col6
-  print mine_row7, mine_co7
-  print mine_row8, mine_col8
+  print ("")
+  print ("MINE LOCATIONS")
+  print (mine_row1, mine_col1)
+  print (mine_row2, mine_col2)
+  print (mine_row3, mine_col3)
+  print (mine_row4, mine_col4)
+  print (mine_row5, mine_col5)
+  print (mine_row6, mine_col6)
+  print (mine_row7, mine_co7)
+  print (mine_row8, mine_col8)
   """
 
   for turn in range(1, 80):
-    print ""
-    print ""
-    print "Turn", turn
+    print ("")
+    print ("")
+    print ("Turn", turn)
 
-    guess_row = (int(raw_input("Guess Row: ")))
-    guess_col = (int(raw_input("Guess Column: ")))
+    guess_row = (int(input("Guess Row: ")))
+    guess_col = (int(input("Guess Column: ")))
 
     if guess_row == mine_row1 and guess_col == mine_col1 or \
     guess_row == mine_row2 and guess_col == mine_col2 or \
@@ -251,7 +251,7 @@ def minesweeper_game_8():
     guess_row == mine_row6 and guess_col == mine_col6 or \
     guess_row == mine_row7 and guess_col == mine_col7 or \
     guess_row == mine_row8 and guess_col == mine_col8:
-      print "Oops, you hit a mine"
+      print ("Oops, you hit a mine")
       break
 
     else:
@@ -260,12 +260,12 @@ def minesweeper_game_8():
 
         if guess_col == -1 and guess_row == -1:
           print_board(board)
-          print ""
+          print ("")
           print("Do you know where a mine is? (yes/no)")
-          answer = str(raw_input("Type: ")).lower()
+          answer = str(input("Type: ")).lower()
           if answer == "yes":
-            answer_mine_row = (int(raw_input("Guess Row:")))
-            answer_mine_col = (int(raw_input("Guess Column:")))
+            answer_mine_row = (int(input("Guess Row:")))
+            answer_mine_col = (int(input("Guess Column:")))
 
             if answer_mine_row == mine_row1 and \
             answer_mine_col == mine_col1 or \
@@ -283,23 +283,23 @@ def minesweeper_game_8():
             answer_mine_col == mine_col7 or \
             answer_mine_row == mine_row8 and \
             answer_mine_col == mine_col8:
-              print "Correct Answer"
+              print ("Correct Answer")
               board[answer_mine_row][answer_mine_col] = " X "
             else:
-              print "Incorrect"
+              print ("Incorrect")
 
         elif guess_col == -2 and guess_row == -2:
-          print ""
+          print ("")
           break
 
         else:
-          print "Oops, that's not even in the ocean."
+          print ("Oops, that's not even in the ocean.")
       elif board[guess_row][guess_col] == " X ":
         print( "You guessed that one already." )
 
 
       elif guess_row == 0 or guess_col == 0:
-        print "Oops, that's not even in the ocean."
+        print ("Oops, that's not even in the ocean.")
 
       else:
 
@@ -433,39 +433,39 @@ def minesweeper_game_8():
       board[mine_row6][mine_col6] == " X " and \
       board[mine_row7][mine_col7] == " X " and \
       board[mine_row8][mine_col8] == " X ":
-        print ""
-        print "Congragulations, you win in", turn, "turns."
+        print ("")
+        print ("Congratulations, you win in", turn, "turns.")
         print_board(board)
         break
 
       if (turn == 80):
-        print "Game Over"
-        print "The first mine was at", mine_row1, ",", mine_col1
-        print "The second mine was at", mine_row2, ",", mine_col2
-        print "The third mine was at", mine_row3, ",", mine_col3
-        print "The fourth mine was at", mine_row4, ",", mine_col4
-        print "The fifth mine was at", mine_row5, ",", mine_col5
-        print "The sixth mine was at", mine_row6, ",", mine_col6
-        print "The seventh mine was at", mine_row7, ",", mine_col7
-        print "The eigth mine was at", mine_row8, ",", mine_col8
+        print ("Game Over")
+        print ("The first mine was at", mine_row1, ",", mine_col1)
+        print ("The second mine was at", mine_row2, ",", mine_col2)
+        print ("The third mine was at", mine_row3, ",", mine_col3)
+        print ("The fourth mine was at", mine_row4, ",", mine_col4)
+        print ("The fifth mine was at", mine_row5, ",", mine_col5)
+        print ("The sixth mine was at", mine_row6, ",", mine_col6)
+        print ("The seventh mine was at", mine_row7, ",", mine_col7)
+        print ("The eighth mine was at", mine_row8, ",", mine_col8)
 
       print_board(board)
 
 
 
 def minesweeper_game_10():
-  print "This is a one player minesweeper game."
-  print "Type in a row and column to try to find where the mine is."
-  print "You are not typing in the mine's location, instead, type in"
-  print "coordinates that you think are close to the mines."
-  print "A _ means that you haven't guessed there yet."
-  print "A 0 means that there are no mines within one unit."
-  print "A 1 means that there are one mine within one unit."
-  print "A 2 means that there are two mines within one unit and so forth"
-  print "To flag where the mine is, type in -1 for row and -1 for column."
-  print "Be sure to type in only NUMBERS from 1 through 8."
-  print "Remember, row is HORIZONTAL and column is VERTICAL."
-  print "Have Fun!!"
+  print ("This is a one player minesweeper game.")
+  print ("Type in a row and column to try to find where the mine is.")
+  print ("You are not typing in the mine's location, instead, type in")
+  print ("coordinates that you think are close to the mines.")
+  print ("A _ means that you haven't guessed there yet.")
+  print ("A 0 means that there are no mines within one unit.")
+  print ("A 1 means that there are one mine within one unit.")
+  print ("A 2 means that there are two mines within one unit and so forth")
+  print ("To flag where the mine is, type in -1 for row and -1 for column.")
+  print ("Be sure to type in only NUMBERS from 1 through 10.")
+  print ("Remember, row is HORIZONTAL and column is VERTICAL.")
+  print ("Have Fun!!")
 
   board = []
 
@@ -477,7 +477,7 @@ def minesweeper_game_10():
 
   def print_board(board):
     for row in board:
-      print " ".join(row)
+      print (" ".join(row))
 
   print_board(board)
 
@@ -519,7 +519,7 @@ def minesweeper_game_10():
 
 
   """
-  print ""
+  print ("")
   print "MINE LOCATIONS"
   print mine_row1, mine_col1
   print mine_row2, mine_col2
@@ -534,12 +534,12 @@ def minesweeper_game_10():
   """
 
   for turn in range(1, 80):
-    print ""
-    print ""
-    print "Turn", turn
+    print ("")
+    print ("")
+    print ("Turn", turn)
 
-    guess_row = (int(raw_input("Guess Row: ")))
-    guess_col = (int(raw_input("Guess Column: ")))
+    guess_row = (int(input("Guess Row: ")))
+    guess_col = (int(input("Guess Column: ")))
 
     if guess_row == mine_row10 and guess_col == mine_col10 or \
     guess_row == mine_row1 and guess_col == mine_col1 or \
@@ -551,7 +551,7 @@ def minesweeper_game_10():
     guess_row == mine_row7 and guess_col == mine_col7 or \
     guess_row == mine_row8 and guess_col == mine_col8 or \
     guess_row == mine_row9 and guess_col == mine_col9:
-      print "Oops, you hit a mine"
+      print ("Oops, you hit a mine")
       break
 
     else:
@@ -560,12 +560,12 @@ def minesweeper_game_10():
 
         if guess_col == -1 and guess_row == -1:
           print_board(board)
-          print ""
+          print ("")
           print("Do you know where a mine is? (yes/no)")
-          answer = str(raw_input("Type: ")).lower()
+          answer = str(input("Type: ")).lower()
           if answer == "yes":
-            answer_mine_row = (int(raw_input("Guess Row:")))
-            answer_mine_col = (int(raw_input("Guess Column:")))
+            answer_mine_row = (int(input("Guess Row:")))
+            answer_mine_col = (int(input("Guess Column:")))
 
             if answer_mine_row == mine_row10 and \
             answer_mine_col == mine_col10 or \
@@ -587,23 +587,23 @@ def minesweeper_game_10():
             answer_mine_col == mine_col8 or \
             answer_mine_row == mine_row9 and \
             answer_mine_col == mine_col9:
-              print "Correct Answer"
+              print ("Correct Answer")
               board[answer_mine_row][answer_mine_col] = " X "
             else:
-              print "Incorrect"
+              print ("Incorrect")
 
         elif guess_col == -2 and guess_row == -2:
-          print ""
+          print ("")
           break
 
         else:
-          print "Oops, that's not even in the ocean."
+          print ("Oops, that's not even in the ocean.")
       elif board[guess_row][guess_col] == " X ":
         print( "You guessed that one already." )
 
 
       elif guess_row == 0 or guess_col == 0:
-        print "Oops, that's not even in the ocean."
+        print ("Oops, that's not even in the ocean.")
 
       else:
 
@@ -806,93 +806,93 @@ def minesweeper_game_10():
       board[mine_row7][mine_col7] == " X " and \
       board[mine_row8][mine_col8] == " X " and \
       board[mine_row9][mine_col9] == " X ":
-        print ""
-        print "Congragulations, you win in", turn, "turns."
+        print ("")
+        print ("Congratulations, you win in", turn, "turns.")
         print_board(board)
         break
 
       if (turn == 80):
-        print "Game Over"
-        print "The first mine was at", mine_row1, ",", mine_col1
-        print "The second mine was at", mine_row2, ",", mine_col2
-        print "The third mine was at", mine_row3, ",", mine_col3
-        print "The fourth mine was at", mine_row4, ",", mine_col4
-        print "The fifth mine was at", mine_row5, ",", mine_col5
-        print "The sixth mine was at", mine_row6, ",", mine_col6
-        print "The seventh mine was at", mine_row7, ",", mine_col7
-        print "The eigth mine was at", mine_row8, ",", mine_col8
-        print "The ninth mine was at", mine_row9, ",", mine_col9
-        print "The tenth mine was at", mine_row10, ",", mine_col10
+        print ("Game Over")
+        print ("The first mine was at", mine_row1, ",", mine_col1)
+        print ("The second mine was at", mine_row2, ",", mine_col2)
+        print ("The third mine was at", mine_row3, ",", mine_col3)
+        print ("The fourth mine was at", mine_row4, ",", mine_col4)
+        print ("The fifth mine was at", mine_row5, ",", mine_col5)
+        print ("The sixth mine was at", mine_row6, ",", mine_col6)
+        print ("The seventh mine was at", mine_row7, ",", mine_col7)
+        print ("The eighth mine was at", mine_row8, ",", mine_col8)
+        print ("The ninth mine was at", mine_row9, ",", mine_col9)
+        print ("The tenth mine was at", mine_row10, ",", mine_col10)
 
       print_board(board)
 
 
 
 def replay():
-    '''  This part of our game is  where we ask the user wehther or not they
+    '''  This part of our game is  where we ask the user whether or not they
     want to play again.  The user inputs either yes or no and depending on that
     the system will play the game again or end it.s
     '''
 
-    print "Do you want to play this minesweeper game?"
-    print "Type in 'yes' or 'no'."
-    ans1 = str(raw_input('Type: \n')).lower()
+    print ("Do you want to play this minesweeper game?")
+    print ("Type in 'yes' or 'no'.")
+    ans1 = str(input('Type: \n')).lower()
 
 
     int1 = 1
 
     if ans1 == 'yes':
         int1 = 0
-        print ""
-        print"This game was created by Keenan Kalra. (2019)"
-        print ""
+        print ("")
+        print ("This game was created by Keenan Kalra. (2019)")
+        print ("")
 
 
     elif ans1 == 'no':
         print("Bye, have a good day!!")
 
     else:
-      print "How hard is it to type in 'yes' or 'no'?"
+      print ("How hard is it to type in 'yes' or 'no'?")
 
     while int1 == 0:
 
-      print "Do you want to play easy, medium, or hard version?"
-      print "Type in either 'easy', 'medium', 'hard'."
-      ans2 = str(raw_input('Type: \n')).lower()
+      print ("Do you want to play easy, medium, or hard version?")
+      print ("Type in either 'easy', 'medium', 'hard'.")
+      ans2 = str(input('Type: \n')).lower()
 
       if ans2 == 'easy':
-        print ""
-        print ""
-        print ""
+        print ("")
+        print ("")
+        print ("")
         minesweeper_game_5()
       elif ans2 == 'medium':
-        print ""
-        print ""
-        print ""
+        print ("")
+        print ("")
+        print ("")
         minesweeper_game_8()
       elif ans2 == 'hard':
-        print ""
-        print ""
-        print ""
+        print ("")
+        print ("")
+        print ("")
         minesweeper_game_10()
       else:
-        print "How hard is it to type in 'easy' or 'medium' or 'hard'?"
+        print ("How hard is it to type in 'easy' or 'medium' or 'hard'?")
         break
 
-      print ""
-      print "Do you want to play again?"
-      print "Type in 'yes' or 'no'."
-      ans1 = str(raw_input('Type: \n')).lower()
+      print ("")
+      print ("Do you want to play again?")
+      print ("Type in 'yes' or 'no'.")
+      ans1 = str(input('Type: \n')).lower()
 
       int1 = 1
 
       if ans1 == 'yes':
-          print ""
+          print ("")
           int1 = 0
       elif ans1 == 'no':
-          print "Bye, have a good day!!"
+          print ("Bye, have a good day!!")
       else:
-          print "We didn't understand you so you can't play again."
-          print "If you want to play, press the up arrow and then enter."
+          print ("We didn't understand you so you can't play again.")
+          print ("If you want to play, press the up arrow and then enter.")
 
 replay()
