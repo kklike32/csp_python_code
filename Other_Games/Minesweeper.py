@@ -10,6 +10,48 @@ print(" |_|\_\___|\___|_| |_|\__,_|_| |_| |_|\_\__,_|_|_|  \__,_| |_____|\___/|_
 print("")
 print("")
 
+def intro(num_board):
+    print("This is a one player minesweeper game.")
+    print("Type in a row and column to try to find where the mine is.")
+    print("You are not typing in the mine's location, instead, type in")
+    print("coordinates that you think are close to the mines.")
+    print("A _ means that you haven't guessed there yet.")
+    print("A 0 means that there are no mines within one unit.")
+    print("A 1 means that there are one mine within one unit.")
+    print("A 2 means that there are two mines within one unit.")
+    print("To flag where the mine is, type in -1 for row and -1 for column.")
+    print("Be sure to type in only NUMBERS from 1 through", num_board, ".")
+    print("Remember, row is HORIZONTAL and column is VERTICAL.")
+    print("Have Fun!!")
+
+board = []
+
+def create_board(num_board):
+
+    board.append([" "])
+    for i in range(0, num_board):
+        num = i + 1
+        append_to_board = " "+str(num)+" "
+        board[0].append(append_to_board)
+
+    for x in range(0, num_board):
+        under_score = " _ "
+        board.append([str(x + 1)])
+        for y in range(0, num_board):
+            board[x+1].append(under_score)
+
+def print_board(board):
+    for row in board:
+        print(" ".join(row))
+
+def create_mines(num_board):
+    mine_row = random_row(board)
+    mine_col = random_col(board)
+
+    mine_row1 = random_row(board)
+    mine_col1 = random_col(board)
+
+
 
 def minesweeper_game_5():
     print("This is a one player minesweeper game.")
@@ -30,8 +72,10 @@ def minesweeper_game_5():
     board.append([" ", " 1 ", " 2 ", " 3 ", " 4 ", " 5 "])
 
     for x in range(0, 5):
-        board.append([str(x + 1), " _ ", " _ ", " _ ", " _ ", " _ "])
-        #board.append([" _ "] * 5)
+        under_score = " _ "
+        board.append([str(x + 1)])
+        for y in range(0, 5):
+            board[x+1].append(under_score)
 
     def print_board(board):
         for row in board:
@@ -57,12 +101,12 @@ def minesweeper_game_5():
         elif mine_row1 == mine_row:
             mine_row1 = random_row(board)
 
-    """
-    print("")
-    print"MINE LOCATIONS"
-    printmine_row, mine_col
-    printmine_row1, mine_col1
-    """
+    if false:
+        print("")
+        print ("MINE LOCATIONS")
+        print (mine_row, mine_col)
+        print (mine_row1, mine_col1)
+
 
     for turn in range(1, 20):
         print("")

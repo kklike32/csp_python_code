@@ -131,7 +131,7 @@ def one_player():
       print_board(board)
 
 def replay():
-    '''  This part of our game is  where we ask the user wehther or not they
+    '''  This part of our game is  where we ask the user whether or not they
     want to play again.  The user inputs either yes or no and depending on that
     the system will play the game again or end it.
     '''
