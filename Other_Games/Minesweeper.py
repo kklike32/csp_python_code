@@ -242,7 +242,8 @@ def minesweeper_game_8():
 
         guess_row = (int(input("Guess Row: ")))
         guess_col = (int(input("Guess Column: ")))
-
+        
+        """Need to fix this!!"""
         if guess_row == mine_row1 and guess_col == mine_col1 or \
                 guess_row == mine_row2 and guess_col == mine_col2 or \
                 guess_row == mine_row3 and guess_col == mine_col3 or \
